@@ -1,6 +1,6 @@
 # HTML ASSIGNMENTS
-## 1. What is the Shortcut Emmet Used to Create boilerplate of HTML ?
-by using '!' emmet.
+---
+## 1. What is the Shortcut Emmet Used to Create boilerplate of HTML ?                   by using '!' emmet.
 ## 2. What is DOCTYPE in Html ?
 Telling our browser version of html.
 ## 3. What is Void Element and Example for Void Elements ?
