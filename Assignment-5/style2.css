@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: Roboto;
+}
+.main-container{
+    background-image: url(https://ik.imagekit.io/hb9mevpzq/tourism/image3.png?updatedAt=1750759761379);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 730px;
+}
+.places-main-container{
+    background-image: url(https://ik.imagekit.io/hb9mevpzq/tourism/image1.png?updatedAt=1750759593229);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 730px;
+}
