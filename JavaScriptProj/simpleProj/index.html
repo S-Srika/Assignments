@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="2xl:container mx-auto bg-[#dc06eb0b]">
+        <div class="flex flex-col justify-center items-center h-screen gap-12  w-[40%] mx-auto ">
+            <h1 class="text-[48px] font-bold">HELLO!!!!!!!</h1>
+            <div class="flex gap-12">
+            <img class="h-[250px]" id="light" src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png" alt="light_on">
+            <img class="h-[250px]" id="cat" src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" alt="cat_on">
+            </div>
+
+            <div class="flex gap-8 text-[24px] ">
+                <button id="On" class="border-2 border-black py-2 px-5 bg-slate-400 rounded-xl">ON</button>
+                <button id="Off" class="border-2 border-black py-2 px-5 bg-slate-400 rounded-xl">OFF</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- script section  -->
+    <script>
+        var On =document.getElementById("On");
+        var Off= document.getElementById("Off");
+        var light= document.getElementById("light");
+        var cat=document.getElementById("cat");
+        console.dir(On);
+        Off.addEventListener("click",()=>{
+            light.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png";
+            cat.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png";
+        });
+        On.addEventListener("click",()=>{
+            light.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png";
+            cat.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png";
+        });
+    </script>
+</body>
+
+</html>
