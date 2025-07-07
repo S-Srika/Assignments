@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Password</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="2xl:container mx-auto bg-gradient-to-b from-[#3096dbfe] to-[#010f53] h-screen  ">
+        <div class="w-[90%] mx-auto">
+            <div class="flex flex-col justify-center items-center h-screen">
+                <form action="" id="updatePassword">
+                    <div class="flex flex-col justify-center items-center gap-10">
+                        <!-- h1 div  -->
+                        <div class="text-[2rem] md:text-[4rem]">
+                            <h1 class="text-white" >Update Password</h1>
+                        </div>
+                        <!-- input div  -->
+                        <div class="flex flex-col gap-6 text-[15px] md:text-[20px] ">
+                            <!-- new password div -->
+                            <div class="flex flex-col gap-4">
+                                <label for="newPassword" class="text-white">New Password</label>
+                                <input
+                                    class="py-2 rounded-2xl border-2 hover:border-[#7919a5] shadow-xl focus:outline-none focus:ring-0 px-4"
+                                    type="password" name="new_password" id="newPassword" placeholder=" Create new password">
+                                <p class="text-red-500 text-[14px] hidden" id="newPasswordErr">Required*</p>
+                            </div>
+                            <!-- confirm password div  -->
+                            <div class="flex flex-col gap-4">
+                                <label for="confirmPassword" class="text-white">Confirm Password</label>
+                                <input
+                                    class="py-2 rounded-2xl border-2 hover:border-[#7919a5] shadow-xl focus:outline-none focus:ring-0 px-4"
+                                    type="password" name="confirm_password" id="confirmPassword"
+                                    placeholder=" Confirm password">
+                                <p class="text-red-500 text-[14px] hidden" id="confirmPasswordErr">password must be same</p>
+                                <p class="text-red-500 text-[14px] hidden" id="requiredConfirm">Required*</p>
+                            </div>
+                        </div>
+                        <!-- button div  -->
+                        <div>
+                            <button id="updateBtn"
+                                class="text-[14px] md:text-[20px] bg-blue-800 border-blue-600 border-2 py-2 px-6 rounded-3xl text-white ">Update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var form =document. getElementById("updatePassword");
+        var newPassword=document.getElementById("newPassword");
+        var confirmPassword=document.getElementById("confirmPassword");
+        var newPasswordErr=document.getElementById("newPasswordErr");
+        var confirmPasswordErr=document.getElementById("confirmPasswordErr");
+        var requiredConfirm=document.getElementById("requiredConfirm");
+         console.dir(newPassword);
+        newPassword.addEventListener("blur",()=>{
+            if(newPassword.value.trim() ===''){
+                newPasswordErr.classList.toggle("hidden");
+            }else{
+                newPasswordErr.classList.add("hidden");
+            }
+        });
+        confirmPassword.addEventListener("blur",()=>{
+            if(newPassword.value.trim() !== confirmPassword.value.trim()){
+                confirmPasswordErr.classList.toggle("hidden");
+            }else{
+                confirmPasswordErr.classList.add("hidden");
+            }
+            if(confirmPassword.value.trim()===''){
+               requiredConfirm.classList.remove("hidden");  
+            }else{
+                requiredConfirm.classList.add("hidden");
+            }
+        });
+
+    </script>
+</body>
+;
+</html>
